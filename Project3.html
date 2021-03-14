@@ -52,62 +52,85 @@
 										</p>
                                     </header>
 									<p>
-                                        The purpose for this poject was for students to get familiar with 3D printing and scanning, learning about the options and barriers of 3D printing and learn the basics about 3D scanning. 
-                                        
-                                        I began this project by looking at what other people have done recently for a laser cut pressfit projects witch plywood. I found some interesting <a href="https://www.google.com/search?q=four+in+a+row+laser+cut&source=lnms&tbm=isch&sa=X&ved=2ahUKEwipmoDi4InvAhWRQhUIHZIxD_sQ_AUoAXoECBAQAw&biw=2048&bih=986">projects</a> on the famous board game <a href="https://www.google.com/search?q=four+in+a+row&sxsrf=ALeKk015R6KN75xKwPqnKRzYUNUNRP7YXw:1614078730086&source=lnms&tbm=isch&sa=X&ved=2ahUKEwizleLq7__uAhVjt3EKHW-rBoIQ_AUoAXoECAIQAw&biw=1280&bih=520&dpr=3">4 in a row</a>  which I used to play with my friends when I was young. So I started sketching how the project sould be.
+                                        The purpose for this project was for students to get familiar with 3D printing and scanning, learn about the options and barriers of 3D printing and learn the basics about 3D scanning. 
+                                        For this project I wanted to 3D print something that would be useful. In one of my classes at the university, Mechatronics we were building a robot that could give a sip of wine and for that project I needed something that could grab a wine glass and serve someone. So I decided to print a robotic claw that would be controlled by a servo motor. But before starting on the design I needed to study the options and barriers of the 3D printers at Fablab.
                                           <header>
-											<h3>The parametric design</h3>
+											<h3>3D printing barriers</h3>
 										</header>
-                                         <a href="#" class="image2 featured"><img src="images/mynd.png" alt="" /></a>
+                                    <p>
+                                            I grouped up with my fellow students Valgeir, Sverrir and Halldór to test one of the printers in Fablab. We decided to print a little test that could give us an simple idea of the barriers for 3D printing. We selected Prusa i3 MK3S for the test and on <a href="https://valgeir99.github.io/valgeir/3d_printing.html">Valgeir's website </a>you can read all about the barriers that follow 3D printing with this printer. With those barriers in mind I started my design. 
+                                  </p>
                                       
-                                        I opened Atodesk Fusion 360 and started drawing the project. I first needed to add parameters for the project. Parametric design is an important feature when it comes to designing things and manufacturing. This allows the designer to change parameters and update automaticly all other parameters. This saves alot of time and the designer does not need to change all the design by hand when something needs to be changed. 
-                                        
-                                        <a href="#" class="image2 featured"><img src="images/para.jpg" alt="" /></a>
-                                        s
-                                        I wanted to have the design of the board game simple but cool. After some time sketching and resketching in Fusion the result was this design: 
-                                    
-                                        <a href="#" class="image2 featured"><img src="images/irod1.jpg" alt="" /></a>
-                                        As can be seen the the holes of the plate needed to be isolated to all the other holes horizontally and the circlular plates that the player drops in the plate needed to stack up on each other and need to be seen throught the holes on the front and the back. The design gives the players the oppertunity to lift up the plate with the circular plates after the game is finished and then everything falls down to the open box at the bottom. I thought this was really smart way to solve the problem: how to get the circular plates out of the rectangular plate. 
                                       <header>
-											<h3>Counting for kerf</h3>
+											<h3>Modeling in Fusion</h3>
 										</header>
-                                        <a href="https://sveppikrull.github.io/Vefsida/laserskurdur.html" class="image2 featured"><img src="images/kerf.jpeg" alt="" /></a>
-                                        When prepairing for the laser cut I realised that I had done the design all wrong. I didn't design the project with any kerf. Kerf is the width of the lasercut and is really important feauture of press fit pojects. To read more about kerf I recomend this <a href="https://www.instructables.com/How-to-Adjust-for-Wood-Thickness-and-Kerf-on-a-Las/">website.</a>
+                                     <a href="#" class="image2 featured"><img src="images/klo.png" alt="" /></a>
+                                   <p> The claw needed to be able to grab a wine glass, hold it and then rotate it to pure the wine. The claw needed to be designed so that the servo motor could fit perfictly into the claw and control it. At the other end of the claw I was going to fit a metal bar that would be connectet to a stepper motor that could rotate the claw and give a sip of the wine.            </p>
+                                       <a href="#" class="image2 featured"><img src="images/klo1.jpg" alt="" /></a>
+                                    
+                                    One of the barriers of 3D printing is time. With that in mind I designed the claw as simple as possible. Mostly sharp edges and simple forms.
+                                           
+                                
+                                    <a href="#" class="image2 featured"><img src="images/klo2.jpg" alt="" /></a>
+                                    The design was made out of two parts, one stationary and one moving part. 
+
+                                    <a href="#" class="image2 featured"><img src="images/klo3.jpg" alt="" /></a>
+                                     
+                                         <a href="#" class="image2 featured"><img src="images/klo4.jpg" alt="" /></a>
                                         
-                                        If I had lasercut  my project without counting for kerf the pressfit would not sitck together. I then decided to draw everything from schratch again. I created parameter named kerf and made the holes for pressfit one kerf smaller then the original hole as can seen on this photo. 
-                                        
-                                        The kerf calculation was done by me and Sverrir Kristinsson. We uploaded the calulations to his website.  <a href="https://sveppikrull.github.io/Vefsida/laserskurdur.html">Here</a> can see how we measured the kerf of the lasercutter.
-                                        <a href="#" class="image2 featured"><img src="images/bil1.jpg" alt="" /></a>
-                                           <header>
-											<h3>Prepairing for lasercut</h3>
-										</header>
-                                After the design was ready I used Fusion to flatten out my 3D model. I followed this <a href="https://www.youtube.com/watch?v=ZYj37I88-4g&ab_channel=2x4video">video</a>; copied my components to another place in the model, moved and rotated them so they would lie down at the XY plane. I then moved them around in the plane so all the components would fit on  600x300mm plywood plate. I then created a new sketch and pressed create-project-project and then selected all the componnents I wanted to project on to my sketch. Then I saved my sketch as a DXF file and imported into Inkscape.
-                                     <a href="#" class="image2 featured"><img src="images/flat1.jpg" alt="" /></a>
-                                    In Inkscape I saw that some lines that I created were splines and when saving as DXF file the splines didn't show up. So I used arc instead and it worked perfictly (I tried downloading some plug-in for fusion to save splines as DXF put it didn't work).  
-                                    I needed to adjust the fill and stroke settings so I opened Fill and stroke, changed the stroke paint to red and change the stroke style width to 0.02 so the lasercutter could read the file. I then saved the file as pdf and the project was ready for laser cut!
-                                    <a href="#" class="image2 featured"><img src="images/ink.jpg" alt="" /></a>
-                                    <header>
+                                                                        <header>
 											<h3>The manufacturing</h3>
 										</header>
-                                    <a href="#" class="image2 featured"><img src="images/IMG-6498.JPG" alt="" /></a>
-                                        I then went to Fablab Reykjavík to lasercut my project. I used Epilog Mini 24 lasercutter and followed this  <a href="https://www.youtube.com/watch?v=siIH7wsFNTo&feature=emb_title&ab_channel=FabLab%C3%8Dsland">video</a> to set up the cut. I needed to adjust the height of the focal point so the laser could cut throught the 4 mm plywood. These were the settings for the cut:
-                                         <a href="#" class="image2 featured"><img src="images/IMG-6501.JPG" alt="" /></a>
-                                        
-                                        It took 33 minuets to complete the cut. Then I took the plywood plate out of the machine and used knife to loosen out the plates that the machine had cut out. 
-                                        <a href="#" class="image2 featured"><img src="images/IMG-6508.JPG" alt="" /></a>
-                                        
-                                        I then press allt the things together and sprayed 22 of the circular plates black so that the players would not play with the same color. 
-                                        <a href="#" class="image2 featured"><img src="images/IMG-6517.JPG" alt="" /></a>
-                                        <a href="#" class="image2 featured"><img src="images/IMG-6534.JPG" alt="" /></a>
-                                    And my boardgame was ready!
-                                        <a href="#" class="image2 featured"><img src="images/IMG-6524.JPG" alt="" /></a>
-                                        <a href="#" class="image2 featured"><img src="images/IMG-6525.JPG" alt="" /></a>
+                                    I saved the design as .stl file in Fusion and opened in <a href="https://ultimaker.com/software/ultimaker-cura">Cura.  </a>Because I was printing my part in the Prusa i3 M35 I needed to open my .stl file in Fablab's computer because the free version of Cura does not have the settings for Prusa i3. I placed my parts in Cura and changed some settings. One of the barriers we saw in the 3D test was bridging. I therefore selected support for my print. I also selected 40% infill for strenght, that means that solid parts of the print are 40% filled with plastic. This was really important because I didn't want my claw to brake while serving someone wine. Then I sliced my part in Cura and saved the file as a G code and moved with a SD card to the Prusa printer. 
+                                      <a href="#" class="image2 featured"><img src="images/settings.jpg" alt="" /></a>
+                                     <a href="#" class="image2 featured"><img src="images/klo6.jpg" alt="" /></a>
+                                    The print took around 4 hours to complete. On the photo below you can see how the support setting make a fill under the bridge for support. After the print I used some tools to remove the support. And my robotic claw was ready!
+                                    <a href="#" class="image2 featured"><img src="images/klo5.jpg" alt="" /></a>
+                                     <a href="#" class="image2 featured"><img src="images/servo.jpg" alt="" /></a>
+                                    The robot that served wine, measured the tempeture of the wine and determined if the wine was red wine or white wine.
+                                    <a href="#" class="image2 featured"><img src="images/robot.jpg" alt="" /></a>
+                                  
+                                  
                                         
                                         <div>
-                                     <header>
+                                                  <header>
+											<h3>3D scanning</h3>
+                                        
+										</header>
+                                            <p> I began the 3D scanning part of this project by watching some <a href="https://www.youtube.com/watch?v=RYM7uZeiXH0">videos </a>and read some <a href="https://www.instructables.com/3d-Scan-Anything-Using-Just-a-Camera/">articles </a>about how to 3D scan an object. I decided to 3D scan my new Nike Airforce shoe. I placed my shoe on a chess board and placed the chess board in the middle of the floor at my home. As can be seen in the video and the article the things and light surrounding the object can be a major factor in the scan. <a href="#" class="image2 featured"><img src="images/skor1.JPG" alt="" /></a>
+                                                I took 100 photos, moved 30 degress after each photo in a circle around my shoe. I did couple of those loops with an different angle. Then I uploaded the photos into Autodesk Recap photo which is a limited application that builds a 3D model from your pictures. The application is limited up to 100 photos for each object and because it's cloud based program the time for the program to process the photos can take from 1 hour up to 24 hours. 
+                                                
+                                            </p>
+                                                     <header>
+											<h3>Post processing</h3>
+										</header>
+                                            <p>After waiting for my model to be ready I needed to clean up my model. I whatched this <a href="https://www.youtube.com/watch?v=GMfnHAJPw_w&ab_channel=itsaCADworld">video </a>on how to process the model and how to remove every other part that I didn't want. 
+                                                 <a href="#" class="image2 featured"><img src="images/recap1.jpg" alt="" /></a>
+                                                I used the selection box to select everything I didn´t want in my model and deleted it. 
+                                                 <a href="#" class="image2 featured"><img src="images/recap2.jpg" alt="" /></a>
+                                                I then selected the slice and fill feature that allowed my to remove the chess board from the shoe. I then selected the bottom of the shoe and filled up the hole that came with the model. Then I went to analyze->detect and fix model issue and fixed some little errors in the mesh. After some post processing my model was ready. I was quite happy with the outcome. The only problem I notice was inside the shoe. The program was not sure what to do with the gap where your foot is supose to go in but I think that that is an normal error for such a complex form. 
+                                                <a href="#" class="image2 featured"><img src="images/skor.jpg" alt="" /></a>
+                                                  <header>
+											<h3>Files</h3>
+										</header>
+                                            
+                                                <a href="Files/verkefni3.zip" download="allfiles">
+                                                    <p>All files </p> </a>
+                                             <header>
+											<h3>Workload</h3>
+										</header>
+                                              <p> 1 hour: 3D test </p>
+                                              <p>   4 hour: Designing and modeling in fusion</p>
+                                              <p>     1 hour: Preparing for 3D printing</p>
+                                              <p>     2 hour: 3D scan and post processing </p>
+                                              <p>     5 hours: Documentation</p>
+                                              <p>     13 hours: Total
+                                            
+                                            </p>
+		                    <header>
 											<h3>Google search words</h3>
 										</header>
-                                            <p>laser cut projects, laser cut board game, four in a row, four in a row laser cut, parametric design, kerf, accounting for kerf, kerf calculations, inkscape, fusion, spline, dxf files, epilog laser, spline to DFX, prepair 3D model for laser cut.
+                                            <p>Prusa i3 M35, Cura, Fusion, robotic claw, wine robot, 3D printing, 3D scanning, Autodesk Recap photo, post processing
                                             
                                             </p>
                                     
