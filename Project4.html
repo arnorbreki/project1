@@ -1,0 +1,242 @@
+<!DOCTYPE HTML>
+<!--
+	Helios by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Project four</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="right-sidebar is-preload">
+		<div id="page-wrapper">
+
+			<!-- Header -->
+				<div id="header">
+
+					<!-- Inner -->
+						<div class="inner">
+							<header>
+								<h1><a href="index.html" id="logo">Project 4</a></h1>
+							</header>
+						</div>
+
+					<!-- Nav -->
+						<nav id="nav">
+							<ul>
+								<li><a href="index.html">Home</a></li>
+								
+								<li><a href="left-sidebar.html">About me</a></li>
+								<li><a href="right-sidebar.html">Resume</a></li>
+								<li><a href="no-sidebar.html">Projects</a></li>
+							</ul>
+						</nav>
+
+				</div>
+
+			<!-- Main -->
+				<div class="wrapper style1">
+
+					<div class="container">
+						<div class="row gtr-200">
+							<div class="col-8 col-12-mobile" id="content">
+								<article id="main">
+									<header>
+										<h2><a href="#">Project 4</a></h2>
+										<p>
+											CNC out of plywood
+										</p>
+                                    </header>
+									<p>
+                                        For this project I teamed up with  <a href="https://sveppikrull.github.io/Vefsida/index.html">Sverrir Kristinsson</a>.</p><p>
+                                        The purpose for this project was for students to get familiar with CNC milling, learn how design for CNC manufacturing and create toolpaths. The goal was to mill something big out of plywood. We wanted to build something that we could use and after some time thinking I remembered that I needed a book shelf in my room. So we sat down and started the initial design of the book shelf with in mind what we had learnt from Halfiði's lectures on CNC manufacturing.
+                                    <a href="#" class="image2 featured"><img src="images/hilla.png" alt="" /></a>
+                                          <header>
+											<h3>Modeling</h3>
+										</header>
+                                         I began modeling the book shelf in Solidworks. I choosed Solidworks for this project just to get some practice and becasue I like the asseembly feature of the program. I started by adding parameter for the thickness of the plywood so that I could easily change the design when going to Fablab and CNC it. This is done in Solidworks by adding a global valiable in "Equations" in the tools tab.
+                                    <a href="#" class="image2 featured"><img src="images/hilla3.jpg" alt="" /></a>
+                                    The design was all about smooth curves that could maybe be hard to saw out of plywood with out the help of CNC machine. I modeled the lower and upper shelves first and then the plates between afterwards. I used some books that I own to decide the size of the shelf so I could fit all my school books in the there. 
+                                      <a href="#" class="image2 featured"><img src="images/solid1.jpg" alt="" /></a>
+                                    I created some slots for the vertical plates so they would press fit into the shelves and it would be easier to screw them together. These had the depth of 5mm and would be easily graved by the CNC machine. 
+                                    <a href="#" class="image2 featured"><img src="images/hilla2.jpg" alt="" /></a>
+                                    
+                                    When I was finished I saved my assembly to another file and started to move all the components to one plane so they would be planar for the DFX file. When wanting to save my parts as a DFX file I found that this was hard to do in Solidworks. You can save part as a DFX easily but I needed to google me through how to do it with assemblies. I finally found out that I could save my assembly as a 2D drawing in the scale 1:1 and then save it as a DFX file. <a href="https://www.youtube.com/watch?v=USFq703l1ao&t=227s&ab_channel=JakeTaylor">Here</a> you can find a video on how to solve this problem. 
+                                      <a href="#" class="image2 featured"><img src="images/drawing.jpg" alt="" /></a>
+                                      <header>
+											<h3>Prepairing toolpaths in VCarve</h3>
+										</header>
+                                       For prepairing the model for milling we used VCarve pro, this is a softwere that helps with postproccesing of vector files and calculates toolpaths. 
+                                    
+                                    
+                                    When I first uploaded my DFX into VCarve I saw that I needed to add some T-bones in the corners of the press fit slots. The T-bones are created in the corners of the slot because of the circular shape of the mill bit. The mill bit will not reach the corners perfectly so T-bones are added. You can read more about this problem <a href="http://blog.inventables.com/2014/06/learn-about-milling-inside-corner.html">here</a>. Before adding the T-bones in the corners I needed to change some of the vectors of the DFX file. Some of the vector lines were combined and some were not. 
+                                    <a href="#" class="image2 featured"><img src="images/Node.jpg" alt="" /></a>
+                                    I right clicked on the lines I wanted to change and there I could press "Node edit mode" and there I selected the lines I wanted to edit, right clicked again and selected "Close vectors with lines".
+                                    The T-bones were added by selecting the fillet opiton and clicking on the corners of the slots.
+                                           <header>
+											<h3>Creating toolpaths</h3>
+										</header>
+                                After the preparation I opened the toolpaths tab in Vcarve. I started by adding drilling toolpath. The drilling toolpath was used to see if everything was in order and if the bit is in the right place in the start of milling. It is good to start the milling by doing something simple to see if everything is set up the right way. The drilling was only 1mmm of deapth and the idea was to place screws there after the drilling to hold the plywood better in place. 
+                                    
+                                Next I added the slot graving. The slot graving had the deapth of 5mm. Then I added the profile toolpath with the deapth of 18.3mm so the bit could mill all the way though the plywood. For all toolpaths I selected 6mm end mill bit and here are the settings for the bit speed rate:
+                                     <a href="#" class="image2 featured"><img src="images/settingsmill.jpg" alt="" /></a>
+                                    Here you can see our toolpath.
+                              <a href="#" class="image2 featured"><img src="images/toolpath.jpg" alt="" /></a>
+                                    
+                                    
+                                    
+                                    
+                                    <header>
+											<h3>The manufacturing</h3>
+										</header>
+                                    We then moved to Fablab Reykjavík to manufacture our book shelf. Hafliði helped us setting up the CNC machine. The machine we used was <a href="https://flr.is/svaedid/Fr%C3%A6sir/shop-bot">Shop bot</a> and is a big CNC machine that can take up to 3000x1500mm plywood. we got one of those big plywood plates with 18mm thickness. The first thing we did was to move the plate into the Shop bot and fasten it with screws in the corners. We nedded to be careful to place the screws were the mill bit could not reach them.
+                                    <a href="#" class="image2 featured"><img src="images/IMG_7063.JPG" alt="" /></a>
+                                    <a href="#" class="image2 featured"><img src="images/IMG_7062.JPG" alt="" /></a>
+                                
+                                We started with changing the mill bit to 6mm bit. This was done with couple of steps that need to be completed carefully.  <a href="https://www.youtube.com/watch?v=qpQU1daoq8M&ab_channel=CHSEngineering">Here</a> you can watch a simple video that follows those steps.
+                                               <a href="#" class="image2 featured"><img src="images/IMG_7073.JPG" alt="" /></a>
+                                Before starting to mill it is important to open the Shop bot command console and select the spindle warm up routine. This is vital bacause it heats up the bearings in the spindle and prevents them from wearing out. It is important that this is done before setting the z axis to zero position. The spindle should not touch the plywood during warm up and testing. 
+                                
+                                Next we set the zero point of the x and y axis. This was done by moving the bot to the corner of the plywood plate with the keyboard buttons. Next we ran some test run on our toolpaths by moving the saved toolpath from Vcarve to the Shop bot command console before zeroing the z axis. We saw that everything ran well and then we could set the zero point of the z axis. This was done by selecting the Z zero option in "cuts" in the command console. Then we took out metal plate and placed below the mill bit. 
+                                               <a href="#" class="image2 featured"><img src="images/IMG_7078.JPG" alt="" /></a>
+                                    Then the Z zero cut lowers the bit until it touches the metal plate and saves the values of the z axis as a zero point. After that everything was ready for milling. For more detailed constructions on how to use the shop bot I recomend Hafliði's savety videos on <a href="https://www.youtube.com/watch?v=qdx1-Oz7Jkk&list=PLU4NWxEpJJum4T0Srnw1mp9xwZyKc09vw&index=3&ab_channel=Hafli%C3%B0i%C3%81sgeirsson">youtube</a>. I recomend if using the shop bot for the first time it is neccessery to have someone that knows the shop bot well and has used it couple of times to help you. All milling tools can be dangerous if not used the right way. 
+                                           <a href="#" class="image2 featured"><img src="images/IMG_7079.JPG" alt="" /></a>
+                                    All the toolpaths were moved as a SBP file to the Shop bot one by one and milled.
+                                     Here you can see the graving of the slots.
+                                               <a href="#" class="image2 featured"><img src="images/IMG_7080.JPG" alt="" /></a>
+                                   
+                                               <a href="#" class="image2 featured"><img src="images/IMG_7081.JPG" alt="" /></a>
+                                          After the milling we cleaned the bot.
+                                           <a href="#" class="image2 featured"><img src="images/IMG_7084.JPG" alt="" /></a>
+                              
+                                    The milling was not perfect. The profile cut was not deap enough so we needed to use some tools to loosen out parts from the main plate. Then we used sandpaper to remove sharp edges and corners. 
+                                               <a href="#" class="image2 featured"><img src="images/IMG_7086.JPG" alt="" /></a>
+                                    
+                                     We finally screwed the parts together.
+                                               <a href="#" class="image2 featured"><img src="images/IMG_7091.JPG" alt="" /></a>
+
+                                    
+                                     And the book shelf was ready!
+                                               <a href="#" class="image2 featured"><img src="images/IMG_7092.JPG" alt="" /></a>
+                                   
+                                
+                                
+                                        <div>
+                                            <header>
+											<h3>Files</h3>
+                                                </header>
+                                            
+                                                <a href="Files/verkefni4.zip" download="allfiles">
+                                                    <p>All files </p> </a>
+                                            
+                                <header>
+											<h3>Workload</h3>
+										</header>
+                                              <p> 2 hours: Initial design and milling research</p>
+                    
+                                              <p>     4 hours: Model and remodel in Solidworks</p>
+                                              <p>     3 hours: Preparing and toolpaths in Vcarve</p>
+                                              <p>     2 hours: Setting up the Shop bot and milling</p>
+                                            
+                                              <p>     1 hour: Postprocessing after milling
+                                            
+                                            </p>
+                                            <p>     6 hours: Documentation
+                                            
+                                            </p>
+                                            <p>     15 hours: Total
+                                            
+                                            </p>
+										
+                                     <header>
+											<h3>Google search words</h3>
+										</header>
+                                            <p>CNC, milling, shop bot, book shelf, CNC projects, Solidworks, Vcarve, Assembly to DFX solidworks.
+                                            </p>
+                                    
+                                    </div>
+                                        
+                                    </p>
+									</section>
+								</article>
+							</div>
+							<div class="col-4 col-12-mobile" id="sidebar">
+								<hr class="first" />
+								<section>
+									<header>
+										<h3><a href="#">About this project</a></h3>
+									</header>
+									<p>
+										This project was made in the course Manufacturing Process VÉL403G in the spring of 2021.<br>
+                                        This project was made by Arnór Breki Ásþórsson and Sverrir Kristinsson.<br>
+                                        Teacher: Hafliði Ásgeirsson.<br>
+                                        Due: 20.04.21
+                                        
+									</p>
+									
+								</section>
+								<hr />
+								
+							</div>
+						</div>
+						<hr />
+						
+					</div>
+
+				</div>
+
+			<!-- Footer -->
+				<div id="footer">
+					<div class="container">
+						<div class="row">
+
+							
+
+							
+								<!-- Contact -->
+									<section class="contact">
+										<header>
+											<h3>Contact</h3>
+										</header>
+										<p>
+                                        aba37@hi.is<br>
+                                        arnorbje@gmail.com<br></p>
+										<ul class="icons">
+											<li><a href="https://twitter.com/ArnorBreki" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+											<li><a href="https://www.facebook.com/arnorbreki/" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+											<li><a href="https://www.instagram.com/arnorbrekii/" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+											
+										</ul>
+									</section>
+
+								<!-- Copyright -->
+									<div class="copyright">
+										<ul class="menu">
+											<li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+										</ul>
+									</div>
+
+							</div>
+
+						</div>
+					</div>
+				</div>
+
+		</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.dropotron.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
